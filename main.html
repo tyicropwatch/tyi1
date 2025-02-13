@@ -10,7 +10,38 @@
         <title>台灣監督企業青年行動</title>              
 
         <style>
-            body {
+            @media (max-width: 768px) {
+                .container {
+                    flex-direction: column;
+                }
+                .left, .right {
+                    max-width: 100%;
+                }
+                .home-link {
+                    left: 0;
+                    width: 100%;
+                }
+                .button1 {
+                    width: 100%;
+                    margin: 5px 0;
+                }
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+                .footer {
+                    flex-direction: column;
+                    padding: 20px 10px;
+                }
+                .footer-left, .footer-right {
+                    max-width: 100%;
+                }
+                .footer-left iframe {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+             body {
                 overflow-x: hidden; 
                 margin: 0; 
             }           
