@@ -58,15 +58,16 @@
                 color:#DCDCDC;
                 cursor:pointer;
             }
-            .outside{                       
-                position:relative;
-                width:100%;
-                height: 440px;
-                margin:0 auto;
-                border:none;
+            .outside {
+                position: relative;
+                width: 100%;
+                height: auto; /* 高度自适应 */
+                margin: 0 auto;
+                border: none;
                 overflow: hidden;
             }
-            .img{
+                
+            .img {
                 max-width: 100%;
                 height: auto !important;
             }
@@ -105,14 +106,13 @@
             .logo{
                 height: 120px !important;
             }
-            .section1{
-                position:relative;
-                background-color:#DCDCDC;
-                top: -31px;
-                height:400px;
-            }
-            .bigtext{
-                font-size: 30px;
+            .big {
+                position: relative;
+                font-size: 40px; /* 缩小字体 */
+                top: 15px;
+                padding-left: 0; /* 移除偏移 */
+                text-align: center; /* 文字居中 */
+                margin: 0 auto; /* 居中 */
             }
             .normaltext{
                 font-size: 20px;
@@ -127,34 +127,29 @@
                 max-width: 90%; /* 限制宽度 */
                 margin: 0 auto; /* 居中 */
             }
-            .section2{
-                position:relative;
-                background-color:#FFFFFF;
-                height:400px;
+            .section1, .section2 {
+                position: relative;
+                background-color: #DCDCDC;
+                height: auto; /* 高度自适应 */
+                padding: 20px 0; /* 增加内边距 */
             }
             .movetoright {
                 padding-left: 0; /* 改为 margin 或 text-align */
                 text-align: center;
             }
-            .textmove1{
-                position:relative;
-                padding-left: 245px;
-                font-size: 30px;  
-                font-weight: bold;
-                top:-20px;
-            }
-            .textmove2{
-                position:relative;
-                padding-left: 215px;
-                font-size: 30px;  
-                font-weight: bold;
-                top:-20px;
+            .textmove1, .textmove2 {
+                padding-left: 0; /* 移除固定偏移 */
+                text-align: center; /* 文字居中 */
+                font-size: 24px; /* 手机字体缩小 */
+                margin: 0 auto; /* 居中 */
+                top: 0; /* 移除偏移 */
             }
             .section3{
-                position:relative;
-                top:-10px;
-                background-color:#DCDCDC;
-                height:800px;
+                position: relative;
+                top: -10px;
+                background-color: #DCDCDC;
+                height: auto; /* 高度自适应 */
+                padding-bottom: 20px; /* 增加底部内边距 */
             }
             .big{
                 position:relative;
@@ -164,11 +159,13 @@
             }
             .morearticle{
                 position: relative;
-                top:90px;
-                left:550px;
-                padding:5px 10px;
-                margin:5px;
-                font-size:15px;
+                top: 20px; /* 调整垂直位置 */
+                left: 0; /* 移除水平偏移 */
+                margin: 0 auto; /* 居中 */
+                display: block; /* 让按钮占满宽度 */
+                width: 90%; /* 按钮占满宽度 */
+                padding: 10px 0; /* 调整内边距 */
+                font-size: 16px; /* 手机字体缩小 */
                 font-weight:bold;
                 background-color:#DCDCDC;
                 color:black;
@@ -179,10 +176,16 @@
                 color:#DCDCDC;
                 cursor:pointer;
             }
-            .p1{
+            .p1 {
                 position: relative;
-                left:100px;
-                font-size:20px;
+                left: 0; /* 移除偏移 */
+                text-align: center; /* 内容居中 */
+                margin: 0 auto; /* 居中 */
+                max-width: 90%; /* 限制宽度 */
+            }
+            .p1 img {
+                width: 100%; /* 图片占满宽度 */
+                height: auto; /* 高度自适应 */
             }
             .section4{
                 position:relative;
@@ -202,6 +205,7 @@
             .footer-left iframe {         
                 width: 100% !important; /* iframe 占满宽度 */
                 height: 200px; /* 固定高度 */
+                border: none;
             }
             .footer-right {
                 text-align: center; /* 文字居中 */
@@ -232,26 +236,36 @@
                 padding: 0;
             }
             @media (max-width: 768px) {
-        /* 强制所有区块垂直排列 */
-        .container {
-            flex-direction: column;
-        }
-        .left, .right {
-            max-width: 100% !important;
-        }
-        
-        /* 隐藏桌面专用元素 */
-        .serial, .prev, .next {
-            display: none;
-        }
-        
-        /* 调整文章页图片 */
-        .center img {
-            width: 100% !important;
-            height: auto !important;
-            left: 0 !important;
-        }
-    }
+                /* 强制所有区块垂直排列 */
+                .container {
+                    flex-direction: row;
+                }
+                .left, .right {
+                    max-width: 100% !important;
+                }
+                
+                /* 隐藏桌面专用元素 */
+                .serial, .prev, .next {
+                    display: none;
+                }
+                
+                /* 调整文章页图片 */
+                .center img {
+                    width: 100% !important;
+                    height: auto !important;
+                    left: 0 !important;
+                }
+                .button1, .readmore, .morearticle {
+                    width: 90%;
+                    font-size: 14px;
+                }
+                .textmove1, .textmove2 {
+                font-size: 20px; /* 进一步缩小字体 */
+                }
+                .big {
+                    font-size: 30px; /* 进一步缩小字体 */
+                }
+            }
             </style>
             <script>                           
                 var pic,now=0,num=4;
