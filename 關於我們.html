@@ -124,13 +124,13 @@
                 top:-40px;
                 height:2000px;
                 background:#DCDCDC;
-                width:100%;
             }
             .center{
                 position:relative;
                 top:45px;
                 left:26%;
-                width:800px;
+                max-width:90%;
+                padding: 0 15px;
             }
             .center p {
                 line-height: 1.5;
@@ -139,6 +139,7 @@
             .center img{
                 width:100%;
                 height:auto;
+                margin: 20px 0;
             }
             .big{
                 font-size:35px;
@@ -155,6 +156,11 @@
                 text-decoration: none;
                 margin: 0;
                 padding: 0;
+            }
+            @media(max-width: 768px){
+                .about-content{
+                    font-size: 14px;
+                }
             }
         </style>
     </head>
